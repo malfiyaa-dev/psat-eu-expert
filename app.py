@@ -33,8 +33,8 @@ pdf_text = load_pdf_content(PDF_FILENAME)
 # --- 3. KONFIGURASI HALAMAN ---
 st.set_page_config(page_title="PSAT EU Expert", page_icon="🌱", layout="wide")
 
-st.title("🌱 Asisten Sampling Pangan Segar Asal Tumbuhan (PSAT)")
-st.markdown("AI Sampling Assistant for Plant-Based Fresh Products in Compliance with Regulation (EU) 2023/2782 by Muhamad Alfiya")
+st.title("🌱 AI Sampling Assistant: Plant-Based Fresh Products")
+st.markdown("Compliance Tool for Mycotoxin Control in Exports to the European Union (EU Regulation 2023/2782) by Muhamad Alfiya")
 
 if pdf_text:
     st.success(f"✅ Database Regulasi Terhubung: {PDF_FILENAME}")
@@ -254,6 +254,7 @@ with tab2:
                             st.markdown(response.text)
                     except:
                         st.error(f"Error AI: {e}")
+
 
 
 
