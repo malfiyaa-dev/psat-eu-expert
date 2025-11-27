@@ -33,8 +33,8 @@ pdf_text = load_pdf_content(PDF_FILENAME)
 # --- 3. KONFIGURASI HALAMAN ---
 st.set_page_config(page_title="PSAT EU Expert", page_icon="🌱", layout="wide")
 
-st.title("🌱 Asisten Sampling Pangan Segar Asal Tumbuhan (PSAT) untuk Ekspor Uni Eropa")
-st.markdown("Kalkulator Sampling Khusus **Pangan Segar Asal Tumbuhan (PSAT)** - Regulasi EU 2782 (2023). by Muhamad Alfiya")
+st.title("🌱 Asisten Sampling Pangan Segar Asal Tumbuhan (PSAT)")
+st.markdown("AI Sampling Assistant for Plant-Based Fresh Products in Compliance with Regulation (EU) 2023/2782 by Muhamad Alfiya")
 
 if pdf_text:
     st.success(f"✅ Database Regulasi Terhubung: {PDF_FILENAME}")
@@ -254,5 +254,6 @@ with tab2:
                             st.markdown(response.text)
                     except:
                         st.error(f"Error AI: {e}")
+
 
 
