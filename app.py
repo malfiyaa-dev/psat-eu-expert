@@ -212,7 +212,7 @@ with tab2:
             with st.chat_message(chat["role"]):
                 st.markdown(chat["content"])
 
-        user_query = st.chat_input("Contoh: Berapa batas mikotoksin untuk jagung?")
+        user_query = st.chat_input("Contoh: Apa yang dimaksud dengan agregat sampel?")
         
         if user_query:
             st.session_state.chat_history.append({"role": "user", "content": user_query})
@@ -254,4 +254,5 @@ with tab2:
                             st.markdown(response.text)
                     except:
                         st.error(f"Error AI: {e}")
+
 
