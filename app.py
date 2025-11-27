@@ -26,15 +26,15 @@ def load_pdf_content(file_path):
     except Exception as e:
         return None
 
-# Load File PDF (Pastikan nama file 'Regulasi EU 2023/2782.pdf' ada di folder proyek)
-PDF_FILENAME = "Regulasi EU 2023/2782.pdf" 
+# Load File PDF (Pastikan nama file 'Regulasi EU 2782 (2023).pdf' ada di folder proyek)
+PDF_FILENAME = "Regulasi EU 2782 (2023).pdf" 
 pdf_text = load_pdf_content(PDF_FILENAME)
 
 # --- 3. KONFIGURASI HALAMAN ---
 st.set_page_config(page_title="PSAT EU Expert", page_icon="🌱", layout="wide")
 
 st.title("🌱 Asisten Sampling Pangan Segar Asal Tumbuhan (PSAT) untuk Ekspor Uni Eropa")
-st.markdown("Kalkulator Sampling Khusus **Pangan Segar Asal Tumbuhan (PSAT)** - Regulasi EU 2023/2782. by Muhamad Alfiya")
+st.markdown("Kalkulator Sampling Khusus **Pangan Segar Asal Tumbuhan (PSAT)** - Regulasi EU 2782 (2023). by Muhamad Alfiya")
 
 if pdf_text:
     st.success(f"✅ Database Regulasi Terhubung: {PDF_FILENAME}")
@@ -203,7 +203,7 @@ with tab2:
     st.header("Konsultasi Regulasi PSAT")
     
     if not pdf_text:
-        st.warning("⚠️ Harap masukkan file 'Regulasi EU 2023/2782.pdf' ke folder proyek.")
+        st.warning("⚠️ Harap masukkan file 'Regulasi EU 2782 (2023).pdf' ke folder proyek.")
     else:
         if "chat_history" not in st.session_state:
             st.session_state.chat_history = []
@@ -254,3 +254,4 @@ with tab2:
                             st.markdown(response.text)
                     except:
                         st.error(f"Error AI: {e}")
+
